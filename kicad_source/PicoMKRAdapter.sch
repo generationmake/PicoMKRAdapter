@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PicoMKRAdapter"
-Date "2021-01-24"
+Date "2021-01-25"
 Rev "0.1"
 Comp "generationmake"
 Comment1 ""
@@ -16,53 +16,53 @@ $EndDescr
 $Comp
 L mechanical-connectors:CONN_01X04 CN3
 U 1 1 5CB452DC
-P 2050 2000
-F 0 "CN3" H 1969 2365 50  0000 C CNN
-F 1 "CONN_01X04" H 1969 2274 50  0000 C CNN
-F 2 "connectors_JST_SH:Connectors_JST_SM04B-SRSS-TB" H 1969 2273 50  0001 C CNN
-F 3 "" H 2050 2000 50  0000 C CNN
-	1    2050 2000
+P 1550 1700
+F 0 "CN3" H 1469 2065 50  0000 C CNN
+F 1 "CONN_01X04" H 1469 1974 50  0000 C CNN
+F 2 "connectors_JST_SH:Connectors_JST_SM04B-SRSS-TB" H 1469 1973 50  0001 C CNN
+F 3 "" H 1550 1700 50  0000 C CNN
+	1    1550 1700
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power-supply:GND #PWR0101
 U 1 1 5CB46465
-P 2350 2200
-F 0 "#PWR0101" H 2350 1950 50  0001 C CNN
-F 1 "GND" H 2350 2050 50  0000 C CNN
-F 2 "" H 2350 2200 50  0000 C CNN
-F 3 "" H 2350 2200 50  0000 C CNN
-	1    2350 2200
+P 1850 1900
+F 0 "#PWR0101" H 1850 1650 50  0001 C CNN
+F 1 "GND" H 1850 1750 50  0000 C CNN
+F 2 "" H 1850 1900 50  0000 C CNN
+F 3 "" H 1850 1900 50  0000 C CNN
+	1    1850 1900
 	1    0    0    -1  
 $EndComp
 $Comp
 L power-supply:+3.3V #PWR0102
 U 1 1 5CB4647E
-P 2450 1750
-F 0 "#PWR0102" H 2450 1600 50  0001 C CNN
-F 1 "+3.3V" H 2450 1890 50  0000 C CNN
-F 2 "" H 2450 1750 50  0000 C CNN
-F 3 "" H 2450 1750 50  0000 C CNN
-	1    2450 1750
+P 1950 1450
+F 0 "#PWR0102" H 1950 1300 50  0001 C CNN
+F 1 "+3.3V" H 1950 1590 50  0000 C CNN
+F 2 "" H 1950 1450 50  0000 C CNN
+F 3 "" H 1950 1450 50  0000 C CNN
+	1    1950 1450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2900 2050 2250 2050
+	2400 1750 1750 1750
 Wire Wire Line
-	2900 2150 2250 2150
+	2400 1850 1750 1850
 Wire Wire Line
-	2450 1950 2450 1750
+	1950 1650 1950 1450
 Wire Wire Line
-	2250 1950 2450 1950
+	1750 1650 1950 1650
 Wire Wire Line
-	2250 1850 2350 1850
+	1750 1550 1850 1550
 Wire Wire Line
-	2350 1850 2350 2200
-Text Label 2500 2050 0    60   ~ 0
-SDA
-Text Label 2500 2150 0    60   ~ 0
-SCL
-Text Notes 1950 1450 0    60   ~ 0
+	1850 1550 1850 1900
+Text Label 2000 1750 0    60   ~ 0
+I2C0_SDA
+Text Label 2000 1850 0    60   ~ 0
+I2C0_SCL
+Text Notes 1450 1150 0    60   ~ 0
 Qwiic connector
 $Comp
 L power-supply:GND #PWR0103
@@ -135,13 +135,9 @@ A5
 Text Label 6850 1700 0    60   ~ 0
 RESET
 Text Label 6850 1800 0    60   ~ 0
-TX
+UART1_TX
 Text Label 6850 1900 0    60   ~ 0
-RX
-Text Label 6850 2000 0    60   ~ 0
-SCL
-Text Label 6850 2100 0    60   ~ 0
-SDA
+UART1_RX
 Wire Wire Line
 	7250 2200 6650 2200
 Wire Wire Line
@@ -364,14 +360,10 @@ Text Label 3800 4100 0    60   ~ 0
 SCK
 Text Label 3800 4200 0    60   ~ 0
 MOSI
-Text Label 3800 3300 0    60   ~ 0
-TX
-Text Label 3800 3400 0    60   ~ 0
-RX
-Text Label 3800 4900 0    60   ~ 0
-SCL
-Text Label 3800 4800 0    60   ~ 0
-SDA
+Text Label 7900 5200 0    60   ~ 0
+UART0_TX
+Text Label 7900 5100 0    60   ~ 0
+UART0_RX
 Text Label 7900 3800 0    60   ~ 0
 AREF
 Text Label 7900 4200 0    60   ~ 0
@@ -382,19 +374,19 @@ Text Label 7900 3900 0    60   ~ 0
 A2
 Wire Wire Line
 	8450 4400 7700 4400
-Text Label 3800 3900 0    60   ~ 0
+Text Label 3800 4700 0    60   ~ 0
 7
-Text Label 3800 3600 0    60   ~ 0
+Text Label 3800 3300 0    60   ~ 0
 0
-Text Label 3800 3700 0    60   ~ 0
+Text Label 3800 3400 0    60   ~ 0
 1
-Text Label 3800 4300 0    60   ~ 0
+Text Label 3800 3600 0    60   ~ 0
 2
-Text Label 3800 4400 0    60   ~ 0
+Text Label 3800 3700 0    60   ~ 0
 3
 Text Label 3800 4600 0    60   ~ 0
 4
-Text Label 3800 4700 0    60   ~ 0
+Text Label 3800 3900 0    60   ~ 0
 5
 Text Label 3800 5100 0    60   ~ 0
 6
@@ -428,4 +420,122 @@ F 3 "" H 750 7250 60  0000 C CNN
 	1    750  7250
 	1    0    0    -1  
 $EndComp
+Text Label 6850 2100 0    60   ~ 0
+I2C0_SDA
+Text Label 6850 2000 0    60   ~ 0
+I2C0_SCL
+Text Label 3800 4800 0    60   ~ 0
+I2C0_SDA
+Text Label 3800 4900 0    60   ~ 0
+I2C0_SCL
+Text Label 7900 4800 0    60   ~ 0
+I2C1_SCL
+Text Label 7900 4900 0    60   ~ 0
+I2C1_SDA
+Text Label 3800 4400 0    60   ~ 0
+UART1_RX
+Text Label 3800 4300 0    60   ~ 0
+UART1_TX
+$Comp
+L mechanical-connectors:CONN_01X04 CN4
+U 1 1 600F6423
+P 1550 2800
+F 0 "CN4" H 1469 3165 50  0000 C CNN
+F 1 "CONN_01X04" H 1469 3074 50  0000 C CNN
+F 2 "connectors_JST_SH:Connectors_JST_SM04B-SRSS-TB" H 1469 3073 50  0001 C CNN
+F 3 "" H 1550 2800 50  0000 C CNN
+	1    1550 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power-supply:GND #PWR04
+U 1 1 600F653B
+P 1850 3000
+F 0 "#PWR04" H 1850 2750 50  0001 C CNN
+F 1 "GND" H 1850 2850 50  0000 C CNN
+F 2 "" H 1850 3000 50  0000 C CNN
+F 3 "" H 1850 3000 50  0000 C CNN
+	1    1850 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:+3.3V #PWR06
+U 1 1 600F6545
+P 1950 2550
+F 0 "#PWR06" H 1950 2400 50  0001 C CNN
+F 1 "+3.3V" H 1950 2690 50  0000 C CNN
+F 2 "" H 1950 2550 50  0000 C CNN
+F 3 "" H 1950 2550 50  0000 C CNN
+	1    1950 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2850 1750 2850
+Wire Wire Line
+	2400 2950 1750 2950
+Wire Wire Line
+	1950 2750 1950 2550
+Wire Wire Line
+	1750 2750 1950 2750
+Wire Wire Line
+	1750 2650 1850 2650
+Wire Wire Line
+	1850 2650 1850 3000
+Text Label 2000 2850 0    60   ~ 0
+I2C1_SDA
+Text Label 2000 2950 0    60   ~ 0
+I2C1_SCL
+Text Notes 1450 2250 0    60   ~ 0
+Qwiic connector
+$Comp
+L mechanical-connectors:CONN_01X04 CN5
+U 1 1 600FDD13
+P 1550 3950
+F 0 "CN5" H 1469 4315 50  0000 C CNN
+F 1 "CONN_01X04" H 1469 4224 50  0000 C CNN
+F 2 "connectors_JST_SH:Connectors_JST_SM04B-SRSS-TB" H 1469 4223 50  0001 C CNN
+F 3 "" H 1550 3950 50  0000 C CNN
+	1    1550 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power-supply:GND #PWR05
+U 1 1 600FDE75
+P 1850 4150
+F 0 "#PWR05" H 1850 3900 50  0001 C CNN
+F 1 "GND" H 1850 4000 50  0000 C CNN
+F 2 "" H 1850 4150 50  0000 C CNN
+F 3 "" H 1850 4150 50  0000 C CNN
+	1    1850 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:+3.3V #PWR07
+U 1 1 600FDE7F
+P 1950 3700
+F 0 "#PWR07" H 1950 3550 50  0001 C CNN
+F 1 "+3.3V" H 1950 3840 50  0000 C CNN
+F 2 "" H 1950 3700 50  0000 C CNN
+F 3 "" H 1950 3700 50  0000 C CNN
+	1    1950 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4000 1750 4000
+Wire Wire Line
+	2400 4100 1750 4100
+Wire Wire Line
+	1950 3900 1950 3700
+Wire Wire Line
+	1750 3900 1950 3900
+Wire Wire Line
+	1750 3800 1850 3800
+Wire Wire Line
+	1850 3800 1850 4150
+Text Notes 1450 3400 0    60   ~ 0
+Qwiic connector
+Text Label 2000 4100 0    60   ~ 0
+UART0_RX
+Text Label 2000 4000 0    60   ~ 0
+UART0_TX
 $EndSCHEMATC
