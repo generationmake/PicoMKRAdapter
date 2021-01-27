@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/bernhard/projects/PicoMKRAdapter/kicad_source/PicoMKRAdapter.sch)
-    (date "Mi 27 Jan 2021 09:17:10 CET")
+    (date "Mi 27 Jan 2021 09:36:02 CET")
     (tool "Eeschema 5.1.9-73d0e3b20d~88~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -16,7 +16,7 @@
         (comment (number 4) (value "")))))
   (components
     (comp (ref CN3)
-      (value CONN_01X04)
+      (value SM04B-SRSS-TB)
       (footprint connectors_JST_SH:Connectors_JST_SM04B-SRSS-TB)
       (libsource (lib mechanical-connectors) (part CONN_01X04) (description "Connector 01x04"))
       (sheetpath (names /) (tstamps /))
@@ -46,13 +46,13 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 600D30AE))
     (comp (ref CN4)
-      (value CONN_01X04)
+      (value SM04B-SRSS-TB)
       (footprint connectors_JST_SH:Connectors_JST_SM04B-SRSS-TB)
       (libsource (lib mechanical-connectors) (part CONN_01X04) (description "Connector 01x04"))
       (sheetpath (names /) (tstamps /))
       (tstamp 600F6423))
     (comp (ref CN5)
-      (value CONN_01X04)
+      (value SM04B-SRSS-TB)
       (footprint connectors_JST_SH:Connectors_JST_SM04B-SRSS-TB)
       (libsource (lib mechanical-connectors) (part CONN_01X04) (description "Connector 01x04"))
       (sheetpath (names /) (tstamps /))
