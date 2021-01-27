@@ -1,0 +1,7 @@
+PicoMKRAdapter - adapter board to connect a Raspberry Pi Pico to an Arduino MKR Shield and vice versa
+see full project documentation at https://github.com/generationmake/PicoMKRAdapter
+
+changes
+
+version 0.1 - 2021-01-27
+* prototype release

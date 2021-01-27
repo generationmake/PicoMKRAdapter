@@ -19,5 +19,6 @@ adapter board to connect a Raspberry Pi Pico to an Arduino MKR Shield and vice v
 
 ![PicoMKRAdapter PCB bot](docs/images/PicoMKRAdapter_bot.png)
 
+## License
 
-
+This hardware is licensed under the CERN OHL v. 1.2
