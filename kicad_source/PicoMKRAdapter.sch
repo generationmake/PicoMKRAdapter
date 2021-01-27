@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "PicoMKRAdapter"
-Date "2021-01-25"
+Date "2021-01-27"
 Rev "0.1"
 Comp "generationmake"
 Comment1 ""
@@ -392,11 +392,11 @@ Text Label 3800 5100 0    60   ~ 0
 6
 Text Label 3800 5200 0    60   ~ 0
 A3
-Text Label 7900 4300 0    60   ~ 0
-A4
 Text Label 7900 4400 0    60   ~ 0
-A5
+A4
 Text Label 7900 4600 0    60   ~ 0
+A5
+Text Label 7900 4700 0    60   ~ 0
 A6
 $Comp
 L devices:Label L2
@@ -538,4 +538,21 @@ Text Label 2000 4100 0    60   ~ 0
 UART0_RX
 Text Label 2000 4000 0    60   ~ 0
 UART0_TX
+Text Label 7900 4300 0    60   ~ 0
+RESET
+Text Notes 8250 3700 0    60   ~ 0
+3V3_EN needs no connection \nbecause it is pulled up on the Raspberry Pi Pico
+Text Notes 550  600  0    60   ~ 0
+find full project documentation at https://github.com/generationmake/PicoMKRAdapter
+$Comp
+L devices:Label L3
+U 1 1 60120086
+P 750 6900
+F 0 "L3" H 978 7006 60  0000 L CNN
+F 1 "Label" H 978 6900 60  0000 L CNN
+F 2 "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen" H 978 6794 60  0000 L CNN
+F 3 "" H 750 6900 60  0000 C CNN
+	1    750  6900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
